@@ -1,0 +1,177 @@
+.navbar{
+    background-color: #f2f1ef;
+    height: 80px;
+    margin: 20px;
+    
+    
+}
+
+
+.login-button{
+    background-color: #abe2a4;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover{
+    background-color: #abe2a4;
+}
+
+
+
+
+.nav-link{
+    color: #413f3d;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active:hover{
+    color: #413f3d;
+}
+
+@media (min-width: 991px){
+
+
+
+.nav-link:hover.nav-link:hover, .nav-link.active:hover{
+    width: 100%;
+    color: #697184;
+}
+}
+
+.hero-section{
+    background: url(images/bgmovear.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
+
+
+.hero-section .container{
+    height: 275vh;
+    z-index: 1;
+    position: relative;
+}
+
+.mpic1{
+  position: absolute;
+  margin-left: 300px;
+  top: 140px;
+  
+}
+
+.content{
+    width: 80%;
+    min-height: 200px;
+    background-color: #4d8b30;
+    color: #413f3d;
+    text-align: center;
+    margin-left: 200px;
+    border-radius: 10px;
+    position: absolute;
+    top:500px;
+
+}
+.paragraph{
+  font-size: 20px;
+  line-height: 30px; 
+}
+
+.p2{
+  width: 100%;
+  height: 50px;
+  position:absolute;
+  margin-left: 800px;
+  top: 800px;
+}
+
+.p3{
+  width: 100%;
+  height: 50px;
+  position:absolute;
+  margin-left: 530px;
+  top: 800px;
+}
+
+.p4{
+  width: 100%;
+  height: 50px;
+  position:absolute;
+  margin-left: 200px;
+  top: 800px;
+}
+
+.p5{
+
+  position:absolute;
+  margin-left: 550px;
+  top: 1288px;
+}
+
+
+.p6{
+
+  position:absolute;
+  margin-left: 220px;
+  top: 1550px;
+}
+
+
+.logopng{
+	width: 100%;
+  top:1550px;
+}
+
+.sidebar {
+  height: 200%; 
+  width: 160px; 
+  position: absolute; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  
+  
+  padding-top: 200px;
+}
+
+
+.sidebar a {
+  padding: 20px 25px 10px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #413f3d;
+  display: block;
+}
+
+
+.sidebar a:hover {
+  color: #b1a6a4;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: opx 10px;
+}
+#footer{
+  width: 100%;
+  position: absolute;
+  top: 1800px;
+}
+#footer-div {
+  margin-left: 200px;
+
+}
+
+.footer {
+  font-family: Arial;
+  font-size: 23px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 50px;
+  margin-left: 300px;
+}
