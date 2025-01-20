@@ -1,177 +1,109 @@
-.navbar{
-    background-color: #f2f1ef;
-    height: 80px;
-    margin: 20px;
-    
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
-
-
-.login-button{
-    background-color: #abe2a4;
-    color: #fff;
-    font-size: 15px;
-    padding: 8px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: 0.3s background-color;
-}
-
-.login-button:hover{
-    background-color: #abe2a4;
-}
-
-
-
-
-.nav-link{
-    color: #413f3d;
-    font-weight: 500;
-    position: relative;
-}
-
-.nav-link:hover, .nav-link.active:hover{
-    color: #413f3d;
-}
-
-@media (min-width: 991px){
-
-
-
-.nav-link:hover.nav-link:hover, .nav-link.active:hover{
-    width: 100%;
-    color: #697184;
-}
-}
-
-.hero-section{
-    background: url(images/bgmovear.png) no-repeat center;
-    background-size: cover;
-    width: 100%;
-}
-
-
-.hero-section .container{
-    height: 275vh;
-    z-index: 1;
-    position: relative;
-}
-
-.mpic1{
-  position: absolute;
-  margin-left: 300px;
-  top: 140px;
-  
-}
-
-.content{
-    width: 80%;
-    min-height: 200px;
-    background-color: #4d8b30;
-    color: #413f3d;
-    text-align: center;
-    margin-left: 200px;
-    border-radius: 10px;
-    position: absolute;
-    top:500px;
-
-}
-.paragraph{
-  font-size: 20px;
-  line-height: 30px; 
-}
-
-.p2{
-  width: 100%;
-  height: 50px;
-  position:absolute;
-  margin-left: 800px;
-  top: 800px;
-}
-
-.p3{
-  width: 100%;
-  height: 50px;
-  position:absolute;
-  margin-left: 530px;
-  top: 800px;
-}
-
-.p4{
-  width: 100%;
-  height: 50px;
-  position:absolute;
-  margin-left: 200px;
-  top: 800px;
-}
-
-.p5{
-
-  position:absolute;
-  margin-left: 550px;
-  top: 1288px;
-}
-
-
-.p6{
-
-  position:absolute;
-  margin-left: 220px;
-  top: 1550px;
-}
-
 
 .logopng{
+	width: 20%;
+}
+:root {
+	--clr: #4CAF50;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #45a049;
+}
+
+form{
+	background: #4CAF50;
+	padding: 60px 80px 60px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+
+form h2{
+	color:#000000;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	letter-spacing: 0.1em;
+	margin-bottom: 50px;
+}
+
+.inputBox{
+	position: relative;
+	width: 300px;
+	margin-bottom: 40px;
+}
+
+.inputBox input{
+	position: relative;
 	width: 100%;
-  top:1550px;
+	padding: 10px 0;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid #000000;
+	outline: none;
+	color: #000000;
+	font-size: 1em;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
 }
 
-.sidebar {
-  height: 200%; 
-  width: 160px; 
-  position: absolute; 
-  z-index: 1; 
-  top: 0; 
-  left: 0;
-  
-  
-  padding-top: 200px;
+.inputBox label{
+	position: absolute;
+	left: 0;
+	padding: 10px 0;
+	pointer-events: none;
+	color: #000000;
+	text-transform: uppercase;
 }
 
-
-.sidebar a {
-  padding: 20px 25px 10px 25px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #413f3d;
-  display: block;
+.inputBox label span{
+	position: relative;
+	display: inline-flex;
+	letter-spacing: 0.05em;
+	transition: 0.2s ease-in-out;
 }
 
-
-.sidebar a:hover {
-  color: #b1a6a4;
+.inputBox input:focus ~ label span,  .inputBox input:valid ~ label span{
+	color: var(--clr);
+	letter-spacing: 0.15em;
+	transform: translateY(-25px);
 }
 
-
-.main {
-  margin-left: 160px; 
-  padding: opx 10px;
-}
-#footer{
-  width: 100%;
-  position: absolute;
-  top: 1800px;
-}
-#footer-div {
-  margin-left: 200px;
-
+.inputBox input:focus, .inputBox input:valid{
+	border-bottom: 2px solid var(--clr);
 }
 
-.footer {
-  font-family: Arial;
-  font-size: 23px;
-  font-weight: bold;
-  position: absolute;
-  bottom: 50px;
-  margin-left: 300px;
+.inputBox input[type="submit"]{
+	background: var(--clr);
+	border: none;
+	padding: 15px;
+	border-radius: 50px;
+	color: #1c2630;
+	font-size: 1.15em;
+	letter-spacing: 0.1em;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.inputBox input[type="submit"]:hover {
+	letter-spacing: 0.35em;
+}
+
+form p{
+	color: #000000;
+}
+form p a{
+	color: var(--clr);
+	font-weight: 500;
+	text-decoration: none;
 }
