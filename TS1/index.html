@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center; 
+            align-items: flex-start;
+        }
+        h1, h2, h3 {
+            color: #333; 
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            background-color: #f4f4f4; 
+            padding: 10px;
+            border-left: 5px solid #25cc2d;
+        }
+        .job-title {
+            font-weight: bold;
+        }
+        .education, .experience {
+            margin-left: 20px;
+        }
+        .resume {
+            width: 800px; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 20px; 
+            background-color: white; 
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; 
+        }
+        .button {
+            padding: 30px 40px;
+            background-color: #25cc2d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .button:hover {
+            background-color: #25cc2d;
+        }
+        .profile-image {
+            width: 200px; 
+            height: auto; 
+            position: absolute;
+            top: 50px; 
+            right: 500px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button class="button" onclick="changeColor()">Change color</button>
+    </div>
+
+    <div class="resume" id="resume">
+        <img src="TS1.JPG" alt="Profile Picture" class="profile-image"> 
+        <h1>Amanda Nicole Samonte</h1>
+        <div class="contact-info">
+            <p>Email: amandanicolesamonte@gmail.com</p>
+            <p>Phone: 0928 518 8988</p>
+            <p>GitHub: github.com/amandasmnte</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Objective</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent faucibus tempus felis, sed vestibulum velit. Curabitur vitae tincidunt mauris, quis lobortis velit. 
+                Nulla hendrerit ex ac quam auctor, non gravida est convallis. Sed dolor arcu, eleifend vitae nisi vitae, gravida tempor enim. Aenean quis lacus eros. Quisque et purus facilisis risus fermentum mollis. 
+                Nunc vitae urna fermentum, blandit urna non, vehicula purus. Pellentesque ac lorem dui. Pellentesque non auctor nulla. Duis ornare convallis nulla, at ultricies leo pellentesque nec. Cras vitae convallis lectus. 
+                Sed egestas blandit semper.</p>
+        </div>
+
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="education">
+                <h3>Primary</h3>
+                <p>School: Convent of the Holy Infant Jesus Toa Payoh</p>
+                <p>Location: Toa Payoh Lorong 1 628, 319765</p>
+                <p>Year: January 2011 - May 2017</p>
+            </div>
+            <div class="education">
+                <h3>Secondary</h3>
+                <p>School: Camarines Norte Senior High School</p>
+                <p>Location: Camarines Norte Daet, Barangay Camambugan, 4600</p>
+                <p>Year: September 2021 - July 2023</p>
+            </div>
+            <div class="education">
+                <h3>Tertiary</h3>
+                <p>School: FEU Institute of Technology</p>
+                <p>Location: Padre Paredes St, Sampaloc, 1015 Metro Manila</p>
+                <p>Year: September 2023 - July 2027</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <ul>
+                <li>Security</li>
+                <li>User Interface Design</li>
+                <li>Problem Solving</li>
+                <li>Management</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Recognitions</h2>
+            <ul>
+                <li>Associate Andriod Developer Google in 2026</li>
+                <li>Andriod App Development Specialization in 2027</li>
+                <li>Meta Andriod Developer in 2025</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function changeColor() {
+            let resume = document.getElementById("resume");
+            let titles = document.querySelectorAll('.section-title');
+            let headings = document.querySelectorAll('h1, h2, h3');
+            let paragraphs = document.querySelectorAll('p, li'); 
+
+            if (resume.style.backgroundColor === "brown") {
+                resume.style.backgroundColor = "white";
+
+                titles.forEach(title => {
+                    title.style.backgroundColor = "#f4f4f4"; 
+                    title.style.color = ""; 
+                    title.style.borderLeft = "5px solid #25cc2d"; 
+                });
+               
+                headings.forEach(heading => {
+                    heading.style.color = ""; 
+                });
+                
+                paragraphs.forEach(paragraph => {
+                    paragraph.style.color = ""; 
+                });
+            } else {
+                resume.style.backgroundColor = "brown";
+                
+                titles.forEach(title => {
+                    title.style.backgroundColor = "brown"; 
+                    title.style.color = "yellow"; 
+                    title.style.borderLeft = "5px solid yellow"; 
+                });
+       
+                headings.forEach(heading => {
+                    heading.style.color = "yellow"; 
+                });
+               
+                paragraphs.forEach(paragraph => {
+                    paragraph.style.color = "white"; 
+                });
+            }
+        }
+    </script>
+</body>
+</html>
