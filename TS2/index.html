@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Days a Week</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            margin: 20px; 
+        }
+
+        h1 {
+            margin-left: 95px; 
+        }
+
+        .container {
+            display: flex; 
+            align-items: flex-start; 
+            margin-left: 95px; 
+        }
+
+        button {
+            margin: 10px;
+            padding: 20px 30px; 
+            font-size: 16px;
+            cursor: pointer;
+            width: 150px; 
+            height: 50px; 
+        }
+
+        
+        .monday { background-color: blue; }
+        .tuesday { background-color: purple; }
+        .wednesday { background-color: red; }
+        .thursday { background-color: green; }
+        .friday { background-color: yellow; }
+        .saturday { background-color: orange; }
+        .sunday { background-color: darkblue; }
+
+        #box {
+            position: relative;
+            display: none; 
+            transition: transform 1s ease, background-color 1s ease;
+            margin-left: 600px; 
+            margin-top: 70px; 
+        }
+
+        .circle {
+            width: 400px; 
+            height: 400px; 
+            border-radius: 500%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Click A Day!</h1>
+    <div class="container">
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <button class="monday" onclick="animateBox('Monday')">Monday</button>
+            <button class="tuesday" onclick="animateBox('Tuesday')">Tuesday</button>
+            <button class="wednesday" onclick="animateBox('Wednesday')">Wednesday</button>
+            <button class="thursday" onclick="animateBox('Thursday')">Thursday</button>
+            <button class="friday" onclick="animateBox('Friday')">Friday</button>
+            <button class="saturday" onclick="animateBox('Saturday')">Saturday</button>
+            <button class="sunday" onclick="animateBox('Sunday')"> Sunday</button>
+        </div>
+        <div id="box"></div>
+    </div>
+
+    <script>
+        function animateBox(day) {
+            const box = document.getElementById('box');
+            box.style.display = 'block'; 
+
+           
+            switch(day) {
+                case 'Monday':
+                    box.style.backgroundColor = 'blue';
+                    break;
+                case 'Tuesday':
+                    box.style.backgroundColor = 'purple';
+                    break;
+                case 'Wednesday':
+                    box.style.backgroundColor = 'red';
+                    break;
+                case 'Thursday':
+                    box.style.backgroundColor = 'green';
+                    break;
+                case 'Friday':
+                    box.style.backgroundColor = 'yellow';
+                    break;
+                case 'Saturday':
+                    box.style.backgroundColor = 'orange';
+                    break;
+                case 'Sunday':
+                    box.style.backgroundColor = 'darkblue';
+                    break;
+            }
+
+            box.className = 'circle'; 
+
+            
+            box.style.transform = 'translateY(-100px)'; 
+            setTimeout(() => {
+                box.style.transform = 'translateY(0)'; 
+            }, 500); 
+        }
+    </script>
+
+</body>
+</html>
