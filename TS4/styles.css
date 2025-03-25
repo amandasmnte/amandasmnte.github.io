@@ -1,0 +1,43 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    position: relative; /
+}
+
+.card img {
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.main-menu-btn {
+    top: 400px;
+    right: 20px;
+}
+
+.modal-body {
+    text-align: left;
+}
+
+.overlay {
+    position: absolute; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255); 
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlay-content {
+    padding: 20px;
+}
+
+.overlay-content img {
+    max-width: 150px; 
+    margin-right: 20px; 
+}
